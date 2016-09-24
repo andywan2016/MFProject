@@ -1,4 +1,3 @@
-
 public class BinomialTree {
 	final int Steps=20;
 	double Pro_up;	
@@ -11,10 +10,10 @@ public class BinomialTree {
     	{
     		BiTree[i]=new double[i+1];
        	}
-    }
-    }
-    	
-    	
-    	
-    	
     
+    	
+    	
+    	
+    	
+    }
+    }
