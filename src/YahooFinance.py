@@ -11,7 +11,7 @@ from datetime import datetime,timedelta,date
 #now tyring agurement paser
 #add share you wanna download here:
 ticketlist=["AAPL","YHOO"]
-
+output_path="../data/Prices.csv"
 if sys.argv[1]=="-f":  #this part is for loading mutiplule shares from list of csv file
 	#file_path="../data/TicketList.csv"
 	#with open(file_path) as csvfile:
@@ -21,21 +21,26 @@ if sys.argv[1]=="-f":  #this part is for loading mutiplule shares from list of c
 #			print line
 	#ticketlist=open(file_path,'r')
 
-	output_file=open("../data/Prices.csv","wb")
+	output_file=open(output_path,"wb")
 	#wr=csv.writer(output_file,dialect='excel')
 	for ticket in ticketlist:
 		print ticket
 		#print type(ticket)
-		tmp_list=getPrice(ticket,30)
+		tmp_list=getPrice(ticket,int(sys.argv[2]))
 		#ticket.extend(tmp_list)
-		print tmp_list
+		#print tmp_list
 		print ticket
 		output_file.write(ticket+',')
-		for e in tmp_list
+		for e in tmp_list:
+			output_file.write(str(e))
+			output_file.write(',')
+
+		
+		
 		#output_line=[ticket].extend(tmp_list)
 		#print output_line
 		#wr.writerows(ls)
-
+		output_file.write("\n")
 	#ticketlist.close()
 	output_file.close()
 			
