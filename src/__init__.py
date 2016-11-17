@@ -32,7 +32,7 @@ def getPrice(tick,days): #(yahoo tick,latest date, how many days look back)
 		#print day_left
 		#price=0
 		cur_str= current_date.strftime("%Y-%m-%d")
-		print cur_str
+		#print cur_str
 		#pirce=getCurrPrice(tick,cur_str)
 		
 		#print getCurrPrice(tick,cur_str)
